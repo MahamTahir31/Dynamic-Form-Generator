@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Dynamic Form Generation</title>
+</head>
+
+<body>
+
+    <h1 align="center">Dynamic Form Generator</h1>
+
+    <h2 align="center">Create a Form Fields</h2>
+
+    <!-- Screen 1: Form Definition -->
+    <div class="form-title">
+        <label for="form-title">Form Title:</label>
+        <input type="text" id="form-title">
+    </div>
+
+
+    <div class="buttons">
+        <button id="addRow">Add Row</button>
+        <button id="saveJson">Save JSON</button>
+
+        <button id="loadJson">Load JSON</button>
+        <button id="generateForm">Generate Form</button>
+    </div>
+    <div class="choose-file">
+        <input type="file" id="loadJsonFile" />
+    </div>
+    <table id="fieldTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Mandatory</th>
+                <th>Options</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic rows will be added here -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- Screen 2: Generated Form -->
+    <h2 id="genForm" align="center">Generated Form</h2>
+    <div id="generatedForm"></div>
+
+    <div class="saveFormData">
+        <button id="saveFormData">Save Form Data</button>
+    </div>
+    <hr>
+    <h2 align="center">Last 10 Submissions</h2>
+    <div id="submissionList"></div>
+
+    <!-- Screen 3: Existing Form -->
+    <hr>
+    
+    <h2 align="center">Select Existing Form</h2>
+    <select id="formSelector">
+        <!-- Options will be populated dynamically -->
+    </select>
+    <button id="loadSelectedForm">Load Form</button>
+    <hr>
+
+</body>
+
+<script src="assets/app.js"></script>
+
+</html>
