@@ -43,6 +43,7 @@ function addRow() {
         row.remove();
     });
 }
+
 function saveJson() {
     const rows = document.querySelectorAll('#fieldTable tbody tr');
     const fieldData = Array.from(rows).map(row => {
@@ -267,10 +268,10 @@ function saveFormData() {
 
     if (allFieldsValid) {
         // Check if the record already exists in formData
-        const isDuplicate = formData.some(existingEntry =>{
+        const isDuplicate = formData.some(existingEntry =>
            Object.keys(existingEntry).every(key => existingEntry[key] === formDataEntry[key])
-            // console.log(Object.keys(existingEntry))
-    });
+          
+    );
 
         if (isDuplicate) {
             alert('This record already exists and cannot be saved again.');
